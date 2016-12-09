@@ -3,7 +3,7 @@
 // =================================================================
 // Module dependencies
 // =================================================================
-var serverConfig = require('../server/serverConfig');
+var serverConfig = require('../serverConfig');
 var debug = require('debug')('hw-react-nyt:server');
 var http = require('http');
 

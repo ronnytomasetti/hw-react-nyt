@@ -11,8 +11,8 @@ var Main = React.createClass({
 			/*We can only render a single div. So we need to group everything inside of this main-container one*/
 			<div className="main-container">
 
-
 				<div className="container">
+
 					{/*Navbar*/}
 					<nav className="navbar navbar-default" role="navigation">
 						<div className="container-fluid">
@@ -25,7 +25,7 @@ var Main = React.createClass({
 								</button>
 								<a className="navbar-brand" href="#">NYT-React</a>
 							</div>
-					
+
 							<div className="collapse navbar-collapse navbar-ex1-collapse">
 								<ul className="nav navbar-nav navbar-right">
 									<li><a href="#/search">Search</a></li>
@@ -37,7 +37,7 @@ var Main = React.createClass({
 
 					{/*Jumbotron*/}
 					<div className="jumbotron">
-						<h2 className="text-center"><strong>(ReactJS) New York Times Article Scrubber</strong></h2>
+						<h2 className="text-center"><strong>Reactified New York Times Article Search</strong></h2>
 						<h3 className="text-center">Search for and save articles of interest.</h3>
 					</div>
 

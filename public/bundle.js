@@ -46,19 +46,13 @@
 
 	'use strict';
 
-	// Include the Main React Dependencies
 	var React = __webpack_require__(1);
 	var ReactDOM = __webpack_require__(32);
 
-	// Grab the proeprty associated with the Router
 	var Router = __webpack_require__(178).Router;
 
-	// Grabs the Routes
 	var routes = __webpack_require__(241);
 
-	// Renders the contents according to the route page. 
-	// Displays the contents in the div app of index.html
-	// Note how ReactDOM takes in two parameters (the contents and the location)
 	ReactDOM.render(React.createElement(
 		Router,
 		null,
@@ -27422,22 +27416,17 @@
 
 	'use strict';
 
-	// Inclue the React library
 	var React = __webpack_require__(1);
 
-	// Include the Router
 	var Router = __webpack_require__(178);
 	var Route = Router.Route;
 
-	//  Include the IndexRoute (catch-all route)
 	var IndexRoute = Router.IndexRoute;
 
-	// Reference the high-level components
 	var Main = __webpack_require__(242);
 	var Search = __webpack_require__(243);
 	var Saved = __webpack_require__(266);
 
-	// Export the Routes
 	module.exports = React.createElement(
 		Route,
 		{ path: '/', component: Main },
@@ -27533,7 +27522,7 @@
 							React.createElement(
 								'strong',
 								null,
-								'(ReactJS) New York Times Article Scrubber'
+								'Reactified New York Times Article Search'
 							)
 						),
 						React.createElement(
@@ -27955,26 +27944,20 @@
 
 	"use strict";
 
-	/*Include the Axios library for HTTP requests*/
 	var axios = __webpack_require__(247);
 
-	/* NYT API Key*/
-	var APIKey = "9d4a8986921972b65754ea0809d47c84:12:74623931";
+	var APIKey = "fbd219dfb3ad40b9bfde88d7990b7874";
 
-	// Helper Functions (in this case the only one is runQuery)
 	var helpers = {
 
-		// This will run our query.
 		runQuery: function runQuery(term, start, end) {
 
-			// Adjust to get search terms in proper format
 			var term = term.trim();
 			var start = start.trim() + "0101";
 			var end = end.trim() + "1231";
 
 			console.log("Query Run");
-			// Run a query using Axios. Then return the results as an object with an array.
-			// See the Axios documentation for details on how we structured this with the params.
+
 			return axios.get('https://api.nytimes.com/svc/search/v2/articlesearch.json', {
 				params: {
 					'api-key': APIKey,
@@ -28000,6 +27983,7 @@
 		postSaved: function postSaved(title, date, url) {
 
 			var newArticle = { title: title, date: date, url: url };
+
 			return axios.post('/api/saved', newArticle).then(function (results) {
 				console.log("axios results", results._id);
 				return results._id;
@@ -28022,7 +28006,6 @@
 
 	};
 
-	// We export the helpers function (which contains getGithubInfo)
 	module.exports = helpers;
 
 /***/ },

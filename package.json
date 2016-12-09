@@ -3,7 +3,7 @@
     "version": "1.0.0",
     "author": "Ronny Tomasetti",
     "description": "React-based rendition of the New York Times Article Search app.",
-    "main": "serverConfig",
+    "main": "www",
     "repository": {
         "url": "https://github.com/ronnytomasetti/hw-react-nyt.git",
         "type": "git"
@@ -27,9 +27,9 @@
         "webpack": "^1.13.1"
     },
     "scripts": {
+        "start": "node ./server/bin/www",
         "debug": "DEBUG=hw-react-nyt:* npm start",
-        "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node ./bin/www"
+        "test": "echo \"Error: no test specified\" && exit 1"
     },
     "license": "MIT"
 }
